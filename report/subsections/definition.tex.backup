@@ -1,0 +1,41 @@
+\section{Definition}
+\label{sec:definition}
+
+\subsection{Project Overwiew}
+The future value of a company stock over a period might be predictable, and the technique developed to do so is known as \emph{Stock Market prediction}\cite{Wiki}. 
+Given some metrics over a period, such as opening stock price, volume of stocks traded and highest stock price traded, predictions can be done using an algorithm.
+The analyses of all possible inputs are done in order to predict the Adjusted Close stock price, in other words, the future value of the company.
+\newline
+\\
+Accurate future value prediction is an objective pursued by many companies. This project will not be sensible to all data available, trying to perform data-mining in twitter and other tools to predict if a company will have a drastically rise/fall on their stock price.
+I intend to investigate the financial market, understanding how it works and the variables responsible of its changes, not to create the best predictive tool on the market. \\ 
+
+
+\subsection{Problem Statement}
+The stock price determines the value of a company in the market. There are companies and peoples that invest their money buying stock shares from companies. Buying and selling the stocks in the right 
+moment can make an average person become a millionaire or make someone to bankrupt.\\
+The problem here is to determine the right moment to buy or sell your stock shares, in order to achieve the higher profit possible.\\
+\newline
+\\
+There are a lot of companies that release daily reports about the best options on the stock market. They determine which companies you should buy or sell stock shares, considering short and long period.\\
+For example, if you are able to predict that some company will grow 150\% in the next two years, would be wise to invest all of your money in this company stocks. There is no investment in the market that 
+guarantees this kind of return with no risk to your money. However, two years is a longe period and a lot of things can happen to this company in this time. So you need to be able to predict if this can 
+become a bad decision and, when it is time to sell everything and get your money back.\\
+\newline
+\\
+There are a lot of open source tools that can provide a significant amount of information about the stock market. Thus, historical information can be downloaded about it in order to analyze 
+how the stock price of a company behaved over the past years. All the data available is based on dates and prices, and is therefore quantifiable, measurable and replicable, given that data 
+from the past can be analyzed.
+The problem stated is to determine the \emph{adjusted close stock price}, and it will be done through an analysis of historical and recent data from stock values.\\
+
+
+\subsection{Metrics}
+\label{sec:metrics}
+Once a model is developed to fit the data and make predictions, an evaluation method to measure its performance is necessary. There are different types of evaluation methods for different types
+of datasets. The dataset that will be studied and used to this project consist in a continuous output. Therefore, the metric used to measure the performance of this model should consider a continuous model.\\
+\newline
+\\
+The \textit{Coefficient of determination}, know as \textit{R squared} is a metric largely used to regression models, because it can indicate the proportion of the variance in the dependent variable
+that is predictable from the independent variables\cite{R2_1}.
+The $R^2 score$ is a statistical measure of the closeness between the data and the fitted regression line \cite{R2}. The result will be between 0 and 1, where 0 indicating that the model doesn't explain 
+the data, and 1 indicating that the model completely explains the data.\\

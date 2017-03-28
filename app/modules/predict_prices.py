@@ -4,6 +4,7 @@ from pandas.tools.plotting import scatter_matrix
 import sqlite3
 from sqlalchemy import create_engine
 import scipy
+from scipy.signal import savgol_filter
 import matplotlib.pyplot as plt
 
 #SKLEARN libs
@@ -103,6 +104,7 @@ class PredStockPrices:
         dates = np.arange(data_len)
         self.X = np.reshape(dates,(-1,1))
         self.y = np.reshape(self.df['adj_close'],-1)
+        self.y = savgol_filter(self.y, 57, 3)
 
 
     def ensemble_model(self,X=None,y=None):
@@ -167,7 +169,6 @@ class PredStockPrices:
 
         params_dist = { 'svr__C'      : np.logspace(-3,2,6), 
                         'svr__kernel' : ['rbf'], 
-                        'svr__degree' : np.logspace(-1,3,6),
                         'svr__gamma'  : np.logspace(-3,2,6)}
 
         steps = [('scaler',StandardScaler()),('svr', SVR())]
